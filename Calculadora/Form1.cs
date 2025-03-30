@@ -82,6 +82,7 @@ namespace Calculadora
         {
             OperacaoSelecionada = Operacao.Adicao;
             Valor = Convert.ToDecimal(txtResultado.Text);
+            lblOperacao.Text = "+";
             txtResultado.Text = "";
         }
 
@@ -89,6 +90,7 @@ namespace Calculadora
         {
             OperacaoSelecionada = Operacao.Subtracao;
             Valor = Convert.ToDecimal(txtResultado.Text);
+            lblOperacao.Text = "-";
             txtResultado.Text = "";
         }
 
@@ -96,6 +98,7 @@ namespace Calculadora
         {
             OperacaoSelecionada = Operacao.Multiplicacao;
             Valor = Convert.ToDecimal(txtResultado.Text);
+            lblOperacao.Text = "*";
             txtResultado.Text = "";
         }
 
@@ -103,6 +106,7 @@ namespace Calculadora
         {
             OperacaoSelecionada = Operacao.Divisao;
             Valor = Convert.ToDecimal(txtResultado.Text);
+            lblOperacao.Text = "/";
             txtResultado.Text = "";
         }
 
@@ -117,7 +121,6 @@ namespace Calculadora
             {
                 case Operacao.Adicao:
                     Resultado = Valor + Convert.ToDecimal(txtResultado.Text);
-                    txtResultado.Text = Resultado.ToString();
                     break;
 
                 case Operacao.Subtracao:
@@ -129,12 +132,16 @@ namespace Calculadora
                     break;
 
                 case Operacao.Divisao:
-                    Resultado = Valor / Convert.ToDecimal(txtResultado.Text);
-                    break;
-
-                default:
+                    Resultado = Valor / Convert.ToDecimal(txtResultado.Text);       
                     break;
             }
+            txtResultado.Text = Resultado.ToString();
+        }
+
+        private void btnVirgula_Click(object sender, EventArgs e)
+        {
+            if(!txtResultado.Text.Contains(","))
+                txtResultado.Text += ",";
         }
     }
 }

@@ -46,7 +46,7 @@
             this.btnSubtracao = new System.Windows.Forms.Button();
             this.btnMultiplicacao = new System.Windows.Forms.Button();
             this.btnApagar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblOperacao = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtResultado
@@ -176,6 +176,7 @@
             this.btnVirgula.TabIndex = 12;
             this.btnVirgula.Text = ",";
             this.btnVirgula.UseVisualStyleBackColor = true;
+            this.btnVirgula.Click += new System.EventHandler(this.btnVirgula_Click);
             // 
             // btnAdicao
             // 
@@ -227,20 +228,20 @@
             this.btnApagar.UseVisualStyleBackColor = true;
             this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
-            // label1
+            // lblOperacao
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 18;
+            this.lblOperacao.AutoSize = true;
+            this.lblOperacao.Location = new System.Drawing.Point(18, 15);
+            this.lblOperacao.Name = "lblOperacao";
+            this.lblOperacao.Size = new System.Drawing.Size(0, 13);
+            this.lblOperacao.TabIndex = 18;
             // 
             // Calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(246, 319);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblOperacao);
             this.Controls.Add(this.btnApagar);
             this.Controls.Add(this.btnAdicao);
             this.Controls.Add(this.btnDivisao);
@@ -288,7 +289,7 @@
         private System.Windows.Forms.Button btnSubtracao;
         private System.Windows.Forms.Button btnMultiplicacao;
         private System.Windows.Forms.Button btnApagar;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblOperacao;
     }
 }
 
